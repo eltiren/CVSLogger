@@ -5,8 +5,8 @@ public enum CVSLogger {
     public static let `default` = createLogger("default")
 
     public static func createLogger(subsystem: String = Bundle.main.bundleIdentifier!,
-                                     _ category: String,
-                                     spamToXcode: Bool = false) -> CVSLog {
+                                    category: String,
+                                    spamToXcode: Bool = false) -> CVSLog {
         let log = CVSLog()
         log.category = category
         if spamToXcode {
