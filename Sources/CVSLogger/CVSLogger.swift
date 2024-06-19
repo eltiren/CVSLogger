@@ -26,6 +26,7 @@ public enum CVSLogger {
     }()
 
     public static func currentLogFileURL() -> URL? {
+        fileLogger.flush()
         if let path = fileLogger.currentLogFileInfo?.filePath {
             return URL(fileURLWithPath: path)
         } else {
