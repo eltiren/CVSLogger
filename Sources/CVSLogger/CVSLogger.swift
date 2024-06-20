@@ -2,6 +2,7 @@ import Foundation
 import CocoaLumberjack
 
 public enum CVSLogger {
+    /// Default logger with the category "default" and subsystem set to main bundle's id.
     public static let `default` = createLogger(category: "default")
 
     public static func createLogger(subsystem: String = Bundle.main.bundleIdentifier!,
